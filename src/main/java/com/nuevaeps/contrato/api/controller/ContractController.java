@@ -4,22 +4,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.UUID;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -96,9 +89,16 @@ public class ContractController {
             }
         }
 
-        // Generar un nombre único para guardar el archivo
-        String uniqueFilename = UUID.randomUUID().toString() + ".txt";
-        Path filePath = uploadsPath.resolve(uniqueFilename);
+        // Obtener el nombre del archivo sin la extensión
+        String fileNameWithoutExt = originalFilename.substring(0, originalFilename.lastIndexOf('.'));
+
+        // Obtener la fecha y hora actual formateada
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+        String timestamp = LocalDateTime.now().format(formatter);
+
+        // Crear el nuevo nombre de archivo con la fecha y hora
+        String newFilename = fileNameWithoutExt + "_" + timestamp + ".txt";
+        Path filePath = uploadsPath.resolve(newFilename);
 
         try {
             // Guardar el archivo en el servidor
@@ -112,7 +112,7 @@ public class ContractController {
         contractDTO.setModalidad(modalidad);
         contractDTO.setNumero(numero);
         contractDTO.setRegimen(regimen);
-        contractDTO.setArchivo(uniqueFilename);
+        contractDTO.setArchivo(newFilename);
 
         // Guardar el contrato
         ContractDTO savedContract = service.save(contractDTO);

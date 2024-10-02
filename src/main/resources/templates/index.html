@@ -62,19 +62,32 @@
             </thead>
             <tbody></tbody>
         </table>
+
+        <!-- Paginación -->
+        <nav>
+            <ul class="pagination" id="pagination">
+                <!-- Se generarán dinámicamente los botones de paginación -->
+            </ul>
+        </nav>
     </div>
 
     <script>
+        // Variables para la paginación
+        let currentPage = 0;
+        let pageSize = 10;
+
         // Cargar la lista de contratos al cargar la página
         $(document).ready(function () {
-            loadContracts();
+            loadContracts(currentPage, pageSize);
         });
 
-        // Función para cargar los contratos
-        function loadContracts() {
-            $.get("/api/contracts", function (data) {
+        // Función para cargar los contratos con paginación
+        function loadContracts(page, size) {
+            $.get(`/api/contracts?page=${page}&size=${size}`, function (data) {
                 let contractsTable = $('#contractsTable tbody');
                 contractsTable.empty();
+
+                // Rellenar la tabla con los contratos
                 data.content.forEach(function (contract) {
                     contractsTable.append(`
                         <tr>
@@ -89,6 +102,9 @@
                         </tr>
                     `);
                 });
+
+                // Actualizar la paginación
+                updatePagination(data);
             });
         }
 
@@ -105,7 +121,7 @@
                 contentType: false,
                 success: function () {
                     alert('Contrato subido exitosamente');
-                    loadContracts();  // Recargar la lista de contratos
+                    loadContracts(currentPage, pageSize);  // Recargar la lista de contratos
                 },
                 error: function () {
                     alert('Error al subir el contrato. Asegúrate de que el archivo sea .txt');
@@ -120,10 +136,31 @@
                     url: `/api/contracts/${id}`,
                     type: 'DELETE',
                     success: function () {
-                        loadContracts();  // Recargar la lista de contratos después de la eliminación
+                        loadContracts(currentPage, pageSize);  // Recargar la lista de contratos después de la eliminación
                     }
                 });
             }
+        }
+
+        // Función para actualizar los botones de paginación
+        function updatePagination(data) {
+            let pagination = $('#pagination');
+            pagination.empty();
+
+            for (let i = 0; i < data.totalPages; i++) {
+                let activeClass = (i === data.number) ? 'active' : '';
+                pagination.append(`
+                    <li class="page-item ${activeClass}">
+                        <a class="page-link" href="#" onclick="goToPage(${i})">${i + 1}</a>
+                    </li>
+                `);
+            }
+        }
+
+        // Función para cambiar de página
+        function goToPage(page) {
+            currentPage = page;
+            loadContracts(page, pageSize);
         }
     </script>
 </body>
