@@ -34,3 +34,13 @@ build/
 
 ### Logs ###
 logs/                 # Excluir todos los directorios 'logs' a nivel global
+**/logs/              # Excluir directorios 'logs' en cualquier parte del proyecto
+
+### OS generated files ###
+.DS_Store
+Thumbs.db
+
+### Others ###
+/node_modules/
+.env
+*.log                 # Ignorar archivos individuales de logs en cualquier parte del proyecto

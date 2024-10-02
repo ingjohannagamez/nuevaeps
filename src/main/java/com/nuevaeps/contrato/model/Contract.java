@@ -26,7 +26,7 @@ public class Contract {
 
     @Column(nullable = false)
     @Schema(description = "Numero del contrato", example = "1")
-    private String numero;
+    private Integer numero;
 
     @Column(nullable = false)
     @Schema(description = "Regimen del contrato", example = "Contributivo, Subsidiado")

@@ -1,24 +1,8 @@
 package com.nuevaeps.contrato.api.controller;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.server.ResponseStatusException;
-
 import com.nuevaeps.contrato.api.dto.ContractDTO;
+import com.nuevaeps.contrato.core.util.FileUtils;
 import com.nuevaeps.contrato.service.interfaces.IContractService;
-
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -26,6 +10,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/contracts")
@@ -64,60 +55,27 @@ public class ContractController {
                     @ApiResponse(responseCode = "400", description = "Error en la carga de archivo")
                })
     public ResponseEntity<ContractDTO> uploadContract(@RequestParam("modalidad") String modalidad,
-                                                      @RequestParam("numero") String numero,
+                                                      @RequestParam("numero") Integer numero,
                                                       @RequestParam("regimen") String regimen,
                                                       @RequestParam("archivo") MultipartFile file) {
-        // Validar si el archivo tiene un nombre válido
-        String originalFilename = file.getOriginalFilename();
-        if (originalFilename == null || originalFilename.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El archivo debe tener un nombre válido");
-        }
 
-        // Validar la extensión del archivo
-        if (!originalFilename.endsWith(".txt")) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El archivo debe ser un archivo .txt");
-        }
+        // Uso de FileUtils para validación y manejo de archivos
+        FileUtils.validarArchivoTxt(file);
+        FileUtils.crearDirectorioDeCargaSiNoExiste();
 
-        // Crear el directorio si no existe
-        String uploadsDir = "uploads/";
-        Path uploadsPath = Paths.get(uploadsDir);
-        if (!Files.exists(uploadsPath)) {
-            try {
-                Files.createDirectories(uploadsPath);
-            } catch (IOException e) {
-                throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error al crear el directorio de carga");
-            }
-        }
+        // Generar un nombre único basado en el nombre original del archivo
+        String nuevoNombreArchivo = FileUtils.generarNombreDeArchivoUnico(file.getOriginalFilename());
+        FileUtils.guardarArchivo(file, nuevoNombreArchivo);
 
-        // Obtener el nombre del archivo sin la extensión
-        String fileNameWithoutExt = originalFilename.substring(0, originalFilename.lastIndexOf('.'));
-
-        // Obtener la fecha y hora actual formateada
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
-        String timestamp = LocalDateTime.now().format(formatter);
-
-        // Crear el nuevo nombre de archivo con la fecha y hora
-        String newFilename = fileNameWithoutExt + "_" + timestamp + ".txt";
-        Path filePath = uploadsPath.resolve(newFilename);
-
-        try {
-            // Guardar el archivo en el servidor
-            Files.write(filePath, file.getBytes());
-        } catch (IOException e) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error al guardar el archivo");
-        }
-
-        // Crear el DTO del contrato
+        // Crear el DTO del contrato y guardar el contrato
         ContractDTO contractDTO = new ContractDTO();
         contractDTO.setModalidad(modalidad);
         contractDTO.setNumero(numero);
         contractDTO.setRegimen(regimen);
-        contractDTO.setArchivo(newFilename);
+        contractDTO.setArchivo(nuevoNombreArchivo);
 
-        // Guardar el contrato
-        ContractDTO savedContract = service.save(contractDTO);
-
-        return new ResponseEntity<>(savedContract, HttpStatus.CREATED);
+        ContractDTO contratoGuardado = service.save(contractDTO);
+        return new ResponseEntity<>(contratoGuardado, HttpStatus.CREATED);
     }
 
     // Obtener un contrato por su ID

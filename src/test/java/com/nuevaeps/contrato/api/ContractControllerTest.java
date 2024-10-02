@@ -75,7 +75,7 @@ public class ContractControllerTest {
     void createContract_ReturnsSavedDto() throws Exception {
         ContractDTO dto = new ContractDTO();
         dto.setModalidad("Evento");
-        dto.setNumero("12345");
+        dto.setNumero(12345);
         dto.setRegimen("Contributivo");
 
         when(service.save(any(ContractDTO.class))).thenReturn(dto);
@@ -97,7 +97,7 @@ public class ContractControllerTest {
         ContractDTO dto = new ContractDTO();
         dto.setId(id);
         dto.setModalidad("Evento");
-        dto.setNumero("12345");
+        dto.setNumero(12345);
         dto.setRegimen("Contributivo");
 
         when(service.findById(id)).thenReturn(Optional.of(dto));
@@ -116,7 +116,7 @@ public class ContractControllerTest {
         Long id = 1L;
         ContractDTO dto = new ContractDTO();
         dto.setModalidad("Capita");
-        dto.setNumero("67890");
+        dto.setNumero(6789);
         dto.setRegimen("Subsidiado");
 
         when(service.update(eq(id), any(ContractDTO.class))).thenReturn(dto);
@@ -126,7 +126,7 @@ public class ContractControllerTest {
                 .content(objectMapper.writeValueAsString(dto)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.modalidad").value("Capita"))
-                .andExpect(jsonPath("$.numero").value("67890"))
+                .andExpect(jsonPath("$.numero").value(67890))
                 .andExpect(jsonPath("$.regimen").value("Subsidiado"));
 
         verify(service).update(eq(id), any(ContractDTO.class));
