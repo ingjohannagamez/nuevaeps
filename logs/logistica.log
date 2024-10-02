@@ -1,0 +1,822 @@
+2024-04-19T17:26:46.042-05:00  INFO 21256 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 21256 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T17:26:46.046-05:00  INFO 21256 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T17:26:46.144-05:00  INFO 21256 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T17:26:50.539-05:00  INFO 21256 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T17:26:51.823-05:00  INFO 21256 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T17:26:51.941-05:00  INFO 21256 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 5 JPA repository interfaces.
+2024-04-19T17:26:52.736-05:00  INFO 21256 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T17:26:52.750-05:00  INFO 21256 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T17:26:52.750-05:00  INFO 21256 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T17:26:52.839-05:00  INFO 21256 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T17:26:52.840-05:00  INFO 21256 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2082 ms
+2024-04-19T17:26:53.031-05:00  INFO 21256 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T17:26:53.100-05:00  INFO 21256 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T17:26:53.144-05:00  INFO 21256 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T17:26:53.462-05:00  INFO 21256 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T17:26:53.500-05:00  INFO 21256 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T17:26:53.666-05:00  INFO 21256 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26cdd4af
+2024-04-19T17:26:53.668-05:00  INFO 21256 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T17:26:53.707-05:00  WARN 21256 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T17:26:55.268-05:00  INFO 21256 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T17:26:55.420-05:00  INFO 21256 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T17:26:56.390-05:00  WARN 21256 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T17:26:57.524-05:00  INFO 21256 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1676e501, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ed763aa, org.springframework.security.web.context.SecurityContextHolderFilter@a422390, org.springframework.security.web.header.HeaderWriterFilter@40032b7b, org.springframework.web.filter.CorsFilter@7f39bcb5, org.springframework.security.web.authentication.logout.LogoutFilter@5f0c45ae, com.ingeneo.logistica.security.JwtAuthenticationFilter@4e6881e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d056418, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@769d0ef2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25192b6e, org.springframework.security.web.access.ExceptionTranslationFilter@70a984c5, org.springframework.security.web.access.intercept.AuthorizationFilter@13c36d48]
+2024-04-19T17:26:58.040-05:00  INFO 21256 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T17:26:58.050-05:00  INFO 21256 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 12.727 seconds (process running for 14.272)
+2024-04-19T17:27:02.560-05:00  INFO 21256 --- [logistica] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T17:27:02.560-05:00  INFO 21256 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T17:27:02.563-05:00  INFO 21256 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-19T17:27:02.595-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T17:27:02.615-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T17:27:02.710-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T17:27:02.710-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T17:27:02.722-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T17:27:02.722-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /error
+2024-04-19T17:27:02.810-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T17:30:34.820-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T17:30:34.822-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T17:30:34.823-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T17:30:34.826-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T17:30:34.829-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T17:30:34.830-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /error
+2024-04-19T17:30:34.837-05:00 DEBUG 21256 --- [logistica] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:02:08.304-05:00  INFO 32944 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 32944 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:02:08.307-05:00  INFO 32944 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:02:08.390-05:00  INFO 32944 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:02:11.335-05:00  INFO 32944 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T18:02:12.406-05:00  INFO 32944 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:02:12.508-05:00  INFO 32944 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:02:13.222-05:00  INFO 32944 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:02:13.242-05:00  INFO 32944 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:02:13.243-05:00  INFO 32944 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:02:13.373-05:00  INFO 32944 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:02:13.373-05:00  INFO 32944 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1820 ms
+2024-04-19T18:02:13.619-05:00  INFO 32944 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:02:13.720-05:00  INFO 32944 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:02:13.769-05:00  INFO 32944 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:02:14.213-05:00  INFO 32944 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:02:14.258-05:00  INFO 32944 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:02:14.473-05:00  INFO 32944 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@144440f5
+2024-04-19T18:02:14.476-05:00  INFO 32944 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:02:14.519-05:00  WARN 32944 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:02:15.872-05:00  INFO 32944 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:02:15.982-05:00  INFO 32944 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:02:16.776-05:00  WARN 32944 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:02:18.126-05:00  INFO 32944 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@729a98e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51c7d472, org.springframework.security.web.context.SecurityContextHolderFilter@7388d94d, org.springframework.security.web.header.HeaderWriterFilter@5cc85ffc, org.springframework.web.filter.CorsFilter@3aa4d595, org.springframework.security.web.authentication.logout.LogoutFilter@4e6881e, com.ingeneo.logistica.security.JwtAuthorizationFilter@e50e308, com.ingeneo.logistica.security.JwtAuthenticationFilter@28ab7ffb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c53c04e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18f493d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47a05ad8, org.springframework.security.web.access.ExceptionTranslationFilter@7d364bce, org.springframework.security.web.access.intercept.AuthorizationFilter@6f999cf4]
+2024-04-19T18:02:18.534-05:00  INFO 32944 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:02:18.548-05:00  INFO 32944 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 10.784 seconds (process running for 12.178)
+2024-04-19T18:02:24.500-05:00  INFO 32944 --- [logistica] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:02:24.501-05:00  INFO 32944 --- [logistica] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:02:24.503-05:00  INFO 32944 --- [logistica] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-19T18:02:24.530-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:02:24.541-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:02:24.791-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:02:24.870-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:02:40.112-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:02:40.139-05:00 ERROR 32944 --- [logistica] [http-nio-8080-exec-3] c.i.l.security.JwtAuthorizationFilter    : Could not set user authentication in security context
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado
+	at com.ingeneo.logistica.service.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:28) ~[classes/:na]
+	at com.ingeneo.logistica.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-04-19T18:02:40.145-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:02:40.205-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T18:02:40.205-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:02:40.214-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T18:02:40.215-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:02:40.216-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-04-19T18:02:40.216-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:05:24.366-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:05:24.366-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:05:24.481-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:05:24.485-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:05:25.490-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:05:25.491-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:05:25.621-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:05:25.624-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:05:26.538-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:05:26.539-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:05:26.633-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:05:26.635-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:05:37.391-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:05:37.409-05:00 ERROR 32944 --- [logistica] [http-nio-8080-exec-10] c.i.l.security.JwtAuthorizationFilter    : Could not set user authentication in security context
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado
+	at com.ingeneo.logistica.service.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:28) ~[classes/:na]
+	at com.ingeneo.logistica.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-04-19T18:05:37.411-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:05:37.412-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T18:05:37.412-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:05:37.414-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T18:05:37.414-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:05:37.415-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-04-19T18:05:37.415-05:00 DEBUG 32944 --- [logistica] [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:15:57.382-05:00  INFO 26836 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 26836 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:15:57.385-05:00  INFO 26836 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:15:57.479-05:00  INFO 26836 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:16:00.963-05:00  INFO 26836 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T18:16:01.953-05:00  INFO 26836 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:16:02.036-05:00  INFO 26836 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:16:02.572-05:00  INFO 26836 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:16:02.585-05:00  INFO 26836 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:16:02.585-05:00  INFO 26836 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:16:02.671-05:00  INFO 26836 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:16:02.672-05:00  INFO 26836 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1489 ms
+2024-04-19T18:16:02.831-05:00  INFO 26836 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:16:02.894-05:00  INFO 26836 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:16:02.930-05:00  INFO 26836 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:16:03.182-05:00  INFO 26836 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:16:03.211-05:00  INFO 26836 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:16:03.359-05:00  INFO 26836 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55c46ec1
+2024-04-19T18:16:03.361-05:00  INFO 26836 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:16:03.393-05:00  WARN 26836 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:16:04.929-05:00  INFO 26836 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:16:05.065-05:00  INFO 26836 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:16:05.815-05:00  WARN 26836 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:16:07.101-05:00  INFO 26836 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e3552b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6971c6b7, org.springframework.security.web.context.SecurityContextHolderFilter@27c9500c, org.springframework.security.web.header.HeaderWriterFilter@27b9d5b7, org.springframework.web.filter.CorsFilter@402d45c6, org.springframework.security.web.authentication.logout.LogoutFilter@796687de, com.ingeneo.logistica.security.JwtAuthorizationFilter@4b37b01e, com.ingeneo.logistica.security.JwtAuthenticationFilter@f53db1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@453961d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@505f6511, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6870e039, org.springframework.security.web.access.ExceptionTranslationFilter@3e92bded, org.springframework.security.web.access.intercept.AuthorizationFilter@3bd7829b]
+2024-04-19T18:16:07.710-05:00  INFO 26836 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:16:07.726-05:00  INFO 26836 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 10.844 seconds (process running for 11.799)
+2024-04-19T18:16:14.367-05:00  INFO 26836 --- [logistica] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:16:14.367-05:00  INFO 26836 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:16:14.369-05:00  INFO 26836 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-19T18:16:14.398-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:16:14.411-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:16:14.717-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:16:14.783-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:16:32.621-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:16:32.649-05:00 ERROR 26836 --- [logistica] [http-nio-8080-exec-6] c.i.l.security.JwtAuthorizationFilter    : Could not set user authentication in security context
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado con el username: 1
+	at com.ingeneo.logistica.service.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:28) ~[classes/:na]
+	at com.ingeneo.logistica.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-04-19T18:16:32.655-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:16:32.718-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T18:16:32.719-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:16:32.726-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T18:16:32.727-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:16:32.728-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-04-19T18:16:32.728-05:00 DEBUG 26836 --- [logistica] [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:16:43.262-05:00  INFO 26836 --- [logistica] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-04-19T18:16:43.290-05:00  INFO 26836 --- [logistica] [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:16:43.292-05:00  INFO 26836 --- [logistica] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-19T18:16:43.295-05:00  INFO 26836 --- [logistica] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-19T18:16:59.083-05:00  INFO 6624 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 6624 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:16:59.085-05:00  INFO 6624 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:16:59.167-05:00  INFO 6624 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:17:02.377-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network ingeneo_default  Creating
+2024-04-19T18:17:02.426-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network ingeneo_default  Created
+2024-04-19T18:17:02.427-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Creating
+2024-04-19T18:17:02.516-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Created
+2024-04-19T18:17:02.597-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Starting
+2024-04-19T18:17:02.926-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Started
+2024-04-19T18:17:02.926-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Waiting
+2024-04-19T18:17:03.443-05:00  INFO 6624 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Healthy
+2024-04-19T18:17:07.043-05:00  INFO 6624 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:17:07.141-05:00  INFO 6624 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:17:07.958-05:00  INFO 6624 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:17:07.974-05:00  INFO 6624 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:17:07.974-05:00  INFO 6624 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:17:08.084-05:00  INFO 6624 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:17:08.084-05:00  INFO 6624 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1916 ms
+2024-04-19T18:17:08.304-05:00  INFO 6624 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:17:08.397-05:00  INFO 6624 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:17:08.449-05:00  INFO 6624 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:17:08.794-05:00  INFO 6624 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:17:08.845-05:00  INFO 6624 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:17:09.008-05:00  INFO 6624 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f908bc0
+2024-04-19T18:17:09.011-05:00  INFO 6624 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:17:09.046-05:00  WARN 6624 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:17:10.540-05:00  INFO 6624 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:17:10.638-05:00  INFO 6624 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:17:11.475-05:00  WARN 6624 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:17:12.620-05:00  INFO 6624 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@297da2c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6237927a, org.springframework.security.web.context.SecurityContextHolderFilter@73e0c775, org.springframework.security.web.header.HeaderWriterFilter@4ff3af97, org.springframework.web.filter.CorsFilter@2b9bacb8, org.springframework.security.web.authentication.logout.LogoutFilter@cf933b1, com.ingeneo.logistica.security.JwtAuthorizationFilter@2850fe85, com.ingeneo.logistica.security.JwtAuthenticationFilter@6c7f3af6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70eced1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39068df9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3285c141, org.springframework.security.web.access.ExceptionTranslationFilter@2b08f55a, org.springframework.security.web.access.intercept.AuthorizationFilter@6ea4b4b2]
+2024-04-19T18:17:12.974-05:00  INFO 6624 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:17:12.987-05:00  INFO 6624 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 14.448 seconds (process running for 15.881)
+2024-04-19T18:17:19.313-05:00  INFO 6624 --- [logistica] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:17:19.314-05:00  INFO 6624 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:17:19.317-05:00  INFO 6624 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-19T18:17:19.336-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:17:19.346-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:17:19.610-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:17:19.692-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:17:33.210-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:17:33.249-05:00 ERROR 6624 --- [logistica] [http-nio-8080-exec-3] c.i.l.security.JwtAuthorizationFilter    : Could not set user authentication in security context
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado con el username: 1
+	at com.ingeneo.logistica.service.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:28) ~[classes/:na]
+	at com.ingeneo.logistica.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-04-19T18:17:33.255-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:17:33.314-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T18:17:33.314-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:17:33.323-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T18:17:33.324-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:17:33.324-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-04-19T18:17:33.324-05:00 DEBUG 6624 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:22:29.553-05:00  INFO 28824 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 28824 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:22:29.556-05:00  INFO 28824 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:22:29.646-05:00  INFO 28824 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:22:32.836-05:00  INFO 28824 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T18:22:34.120-05:00  INFO 28824 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:22:34.243-05:00  INFO 28824 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:22:35.023-05:00  INFO 28824 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:22:35.040-05:00  INFO 28824 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:22:35.041-05:00  INFO 28824 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:22:35.156-05:00  INFO 28824 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:22:35.156-05:00  INFO 28824 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2092 ms
+2024-04-19T18:22:35.367-05:00  INFO 28824 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:22:35.444-05:00  INFO 28824 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:22:35.489-05:00  INFO 28824 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:22:35.784-05:00  INFO 28824 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:22:35.821-05:00  INFO 28824 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:22:35.989-05:00  INFO 28824 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d6d683e
+2024-04-19T18:22:35.991-05:00  INFO 28824 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:22:36.027-05:00  WARN 28824 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:22:37.365-05:00  INFO 28824 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:22:37.496-05:00  INFO 28824 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:22:38.404-05:00  WARN 28824 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:22:39.690-05:00  INFO 28824 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f999cf4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7892635c, org.springframework.security.web.context.SecurityContextHolderFilter@5cc85ffc, org.springframework.security.web.header.HeaderWriterFilter@5a63de07, org.springframework.web.filter.CorsFilter@79c9a128, org.springframework.security.web.authentication.logout.LogoutFilter@1676e501, com.ingeneo.logistica.security.JwtAuthorizationFilter@729a98e9, com.ingeneo.logistica.security.JwtAuthenticationFilter@51c7d472, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57386162, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7388d94d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aa4d595, org.springframework.security.web.access.ExceptionTranslationFilter@68d1f4e2, org.springframework.security.web.access.intercept.AuthorizationFilter@7d2d5625]
+2024-04-19T18:22:40.069-05:00  INFO 28824 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:22:40.082-05:00  INFO 28824 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 11.037 seconds (process running for 12.431)
+2024-04-19T18:22:47.583-05:00  INFO 28824 --- [logistica] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:22:47.584-05:00  INFO 28824 --- [logistica] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:22:47.586-05:00  INFO 28824 --- [logistica] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-19T18:22:47.623-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:22:47.706-05:00 ERROR 28824 --- [logistica] [http-nio-8080-exec-1] c.i.l.security.JwtAuthorizationFilter    : Could not set user authentication in security context
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado con el username: 1
+	at com.ingeneo.logistica.service.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:28) ~[classes/:na]
+	at com.ingeneo.logistica.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-04-19T18:22:47.716-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:22:47.806-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T18:22:47.806-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:22:47.819-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T18:22:47.819-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:22:47.820-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-04-19T18:22:47.820-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:23:02.148-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:23:02.164-05:00 ERROR 28824 --- [logistica] [http-nio-8080-exec-3] c.i.l.security.JwtAuthorizationFilter    : Could not set user authentication in security context
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: Usuario no encontrado con el username: 1
+	at com.ingeneo.logistica.service.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:28) ~[classes/:na]
+	at com.ingeneo.logistica.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-04-19T18:23:02.167-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:23:02.169-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/truckLogistics/save?continue to session
+2024-04-19T18:23:02.169-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:23:02.170-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-04-19T18:23:02.170-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:23:02.172-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-04-19T18:23:02.172-05:00 DEBUG 28824 --- [logistica] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-04-19T18:25:20.212-05:00  INFO 9244 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 9244 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:25:20.216-05:00  INFO 9244 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:25:20.291-05:00  INFO 9244 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:25:24.235-05:00  INFO 9244 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T18:25:26.153-05:00  INFO 9244 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:25:26.322-05:00  INFO 9244 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:25:27.014-05:00  INFO 9244 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:25:27.028-05:00  INFO 9244 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:25:27.028-05:00  INFO 9244 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:25:27.113-05:00  INFO 9244 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:25:27.115-05:00  INFO 9244 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2648 ms
+2024-04-19T18:25:27.331-05:00  INFO 9244 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:25:27.431-05:00  INFO 9244 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:25:27.475-05:00  INFO 9244 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:25:27.906-05:00  INFO 9244 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:25:27.977-05:00  INFO 9244 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:25:28.205-05:00  INFO 9244 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c0fefac
+2024-04-19T18:25:28.208-05:00  INFO 9244 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:25:28.264-05:00  WARN 9244 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:25:29.750-05:00  INFO 9244 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:25:29.872-05:00  INFO 9244 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:25:30.560-05:00  WARN 9244 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:25:31.787-05:00  INFO 9244 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@189f2184, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57386162, org.springframework.security.web.context.SecurityContextHolderFilter@293dd4b3, org.springframework.security.web.header.HeaderWriterFilter@3ce60feb, org.springframework.web.filter.CorsFilter@7388d94d, org.springframework.security.web.authentication.logout.LogoutFilter@53c39950, com.ingeneo.logistica.security.JwtAuthorizationFilter@6da14f7f, com.ingeneo.logistica.security.JwtAuthenticationFilter@c53c04e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51577fc8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@753cfae3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18f493d7, org.springframework.security.web.access.ExceptionTranslationFilter@502f6f6a, org.springframework.security.web.access.intercept.AuthorizationFilter@7d364bce]
+2024-04-19T18:25:32.153-05:00  INFO 9244 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:25:32.166-05:00  INFO 9244 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 12.479 seconds (process running for 13.794)
+2024-04-19T18:25:38.400-05:00  INFO 9244 --- [logistica] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:25:38.401-05:00  INFO 9244 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:25:38.403-05:00  INFO 9244 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-19T18:25:38.436-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/authenticate
+2024-04-19T18:25:38.450-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/authenticate
+2024-04-19T18:25:38.739-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-19T18:25:38.853-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-19T18:25:51.587-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:25:51.621-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/truckLogistics/save
+2024-04-19T18:26:22.127-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:26:22.138-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/truckLogistics/save
+2024-04-19T18:27:39.083-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/truckLogistics/save
+2024-04-19T18:27:39.121-05:00 DEBUG 9244 --- [logistica] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/truckLogistics/save
+2024-04-19T18:27:50.183-05:00  INFO 9244 --- [logistica] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-04-19T18:27:50.215-05:00  INFO 9244 --- [logistica] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:27:50.218-05:00  INFO 9244 --- [logistica] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-19T18:27:50.225-05:00  INFO 9244 --- [logistica] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-19T18:27:54.386-05:00  INFO 33056 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 33056 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:27:54.390-05:00  INFO 33056 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:27:54.507-05:00  INFO 33056 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:27:57.642-05:00  INFO 33056 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T18:27:58.977-05:00  INFO 33056 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:27:59.080-05:00  INFO 33056 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:27:59.736-05:00  INFO 33056 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:27:59.750-05:00  INFO 33056 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:27:59.750-05:00  INFO 33056 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:27:59.841-05:00  INFO 33056 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:27:59.841-05:00  INFO 33056 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1978 ms
+2024-04-19T18:28:00.046-05:00  INFO 33056 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:28:00.125-05:00  INFO 33056 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:28:00.176-05:00  INFO 33056 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:28:00.461-05:00  INFO 33056 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:28:00.496-05:00  INFO 33056 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:28:00.684-05:00  INFO 33056 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8ee03f5
+2024-04-19T18:28:00.688-05:00  INFO 33056 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:28:00.738-05:00  WARN 33056 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:28:02.069-05:00  INFO 33056 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:28:02.202-05:00  INFO 33056 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:28:02.893-05:00  WARN 33056 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:28:03.982-05:00  INFO 33056 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f39bcb5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e6881e, org.springframework.security.web.context.SecurityContextHolderFilter@3d056418, org.springframework.security.web.header.HeaderWriterFilter@6fa48ee4, org.springframework.web.filter.CorsFilter@25192b6e, org.springframework.security.web.authentication.logout.LogoutFilter@f1b006b, com.ingeneo.logistica.security.JwtAuthorizationFilter@76d654, com.ingeneo.logistica.security.JwtAuthenticationFilter@32180efb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d58ed12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@221ef0f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20ed6de, org.springframework.security.web.access.ExceptionTranslationFilter@40032b7b, org.springframework.security.web.access.intercept.AuthorizationFilter@f1e8753]
+2024-04-19T18:28:04.478-05:00  INFO 33056 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:28:04.496-05:00  INFO 33056 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 10.681 seconds (process running for 11.815)
+2024-04-19T18:28:10.543-05:00  INFO 33056 --- [logistica] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:28:10.544-05:00  INFO 33056 --- [logistica] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:28:10.548-05:00  INFO 33056 --- [logistica] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-04-19T18:32:26.299-05:00  INFO 31256 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 31256 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T18:32:26.301-05:00  INFO 31256 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T18:32:26.385-05:00  INFO 31256 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T18:32:29.584-05:00  INFO 31256 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T18:32:30.718-05:00  INFO 31256 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T18:32:30.816-05:00  INFO 31256 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 5 JPA repository interfaces.
+2024-04-19T18:32:31.612-05:00  INFO 31256 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T18:32:31.633-05:00  INFO 31256 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T18:32:31.634-05:00  INFO 31256 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T18:32:31.755-05:00  INFO 31256 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T18:32:31.755-05:00  INFO 31256 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1946 ms
+2024-04-19T18:32:32.014-05:00  INFO 31256 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T18:32:32.098-05:00  INFO 31256 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T18:32:32.151-05:00  INFO 31256 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T18:32:32.764-05:00  INFO 31256 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T18:32:32.828-05:00  INFO 31256 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T18:32:33.069-05:00  INFO 31256 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b8a0d03
+2024-04-19T18:32:33.072-05:00  INFO 31256 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T18:32:33.133-05:00  WARN 31256 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T18:32:34.879-05:00  INFO 31256 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T18:32:35.032-05:00  INFO 31256 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T18:32:35.994-05:00  WARN 31256 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T18:32:37.152-05:00  INFO 31256 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2acfd27b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e8359da, org.springframework.security.web.context.SecurityContextHolderFilter@a55b4f9, org.springframework.security.web.header.HeaderWriterFilter@2a5917f6, org.springframework.web.filter.CorsFilter@36b6802f, org.springframework.security.web.authentication.logout.LogoutFilter@61f18997, com.ingeneo.logistica.security.JwtAuthorizationFilter@7d2d5625, com.ingeneo.logistica.security.JwtAuthenticationFilter@29a51ff1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72769bf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a63de07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dacde96, org.springframework.security.web.access.ExceptionTranslationFilter@221ef0f0, org.springframework.security.web.access.intercept.AuthorizationFilter@20ed6de]
+2024-04-19T18:32:37.536-05:00  INFO 31256 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T18:32:37.547-05:00  INFO 31256 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 11.766 seconds (process running for 13.144)
+2024-04-19T18:33:09.207-05:00  INFO 31256 --- [logistica] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T18:33:09.207-05:00  INFO 31256 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T18:33:09.210-05:00  INFO 31256 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-19T19:39:08.895-05:00  INFO 27940 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 27940 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T19:39:08.897-05:00  INFO 27940 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T19:39:08.980-05:00  INFO 27940 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T19:39:12.051-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network ingeneo_default  Creating
+2024-04-19T19:39:12.110-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network ingeneo_default  Created
+2024-04-19T19:39:12.110-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Creating
+2024-04-19T19:39:12.219-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Created
+2024-04-19T19:39:12.241-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Starting
+2024-04-19T19:39:12.543-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Started
+2024-04-19T19:39:12.544-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Waiting
+2024-04-19T19:39:13.073-05:00  INFO 27940 --- [logistica] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container ingeneo-postgres-1  Healthy
+2024-04-19T19:39:18.234-05:00  INFO 27940 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T19:39:18.344-05:00  INFO 27940 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2024-04-19T19:39:18.972-05:00  INFO 27940 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T19:39:18.985-05:00  INFO 27940 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T19:39:18.986-05:00  INFO 27940 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T19:39:19.071-05:00  INFO 27940 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T19:39:19.072-05:00  INFO 27940 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1884 ms
+2024-04-19T19:39:19.250-05:00  INFO 27940 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T19:39:19.326-05:00  INFO 27940 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T19:39:19.366-05:00  INFO 27940 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T19:39:19.652-05:00  INFO 27940 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T19:39:19.689-05:00  INFO 27940 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T19:39:19.848-05:00  INFO 27940 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@290807e5
+2024-04-19T19:39:19.850-05:00  INFO 27940 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T19:39:19.884-05:00  WARN 27940 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T19:39:21.187-05:00  INFO 27940 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T19:39:21.285-05:00  INFO 27940 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T19:39:22.095-05:00  WARN 27940 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T19:39:23.212-05:00  INFO 27940 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ca50bb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16817bad, org.springframework.security.web.context.SecurityContextHolderFilter@1be15455, org.springframework.security.web.header.HeaderWriterFilter@1da53092, org.springframework.web.filter.CorsFilter@301c0aae, org.springframework.security.web.authentication.logout.LogoutFilter@41030c21, com.ingeneo.logistica.security.JwtAuthorizationFilter@105e8710, com.ingeneo.logistica.security.JwtAuthenticationFilter@7442be61, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dfe2875, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@402fcf14, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6903ef57, org.springframework.security.web.access.ExceptionTranslationFilter@7d29fc6, org.springframework.security.web.access.intercept.AuthorizationFilter@6b862f17]
+2024-04-19T19:39:23.747-05:00  INFO 27940 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T19:39:23.766-05:00  INFO 27940 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 15.344 seconds (process running for 16.636)
+2024-04-19T19:40:03.035-05:00  INFO 29960 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 29960 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T19:40:03.037-05:00  INFO 29960 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T19:40:03.126-05:00  INFO 29960 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T19:40:07.004-05:00  INFO 29960 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T19:40:08.059-05:00  INFO 29960 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T19:40:08.144-05:00  INFO 29960 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
+2024-04-19T19:40:08.739-05:00  INFO 29960 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T19:40:08.759-05:00  INFO 29960 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T19:40:08.759-05:00  INFO 29960 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T19:40:08.874-05:00  INFO 29960 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T19:40:08.874-05:00  INFO 29960 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1650 ms
+2024-04-19T19:40:09.113-05:00  INFO 29960 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T19:40:09.200-05:00  INFO 29960 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T19:40:09.250-05:00  INFO 29960 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T19:40:09.561-05:00  INFO 29960 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T19:40:09.595-05:00  INFO 29960 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T19:40:09.754-05:00  INFO 29960 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54286339
+2024-04-19T19:40:09.757-05:00  INFO 29960 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T19:40:09.794-05:00  WARN 29960 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T19:40:11.095-05:00  INFO 29960 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T19:40:11.210-05:00  INFO 29960 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T19:40:11.907-05:00  WARN 29960 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T19:40:13.009-05:00  INFO 29960 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47a05ad8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b3427c4, org.springframework.security.web.context.SecurityContextHolderFilter@4a3e1b5d, org.springframework.security.web.header.HeaderWriterFilter@c53c04e, org.springframework.web.filter.CorsFilter@5275d709, org.springframework.security.web.authentication.logout.LogoutFilter@6ea0dfaa, com.ingeneo.logistica.security.JwtAuthorizationFilter@21523e1b, com.ingeneo.logistica.security.JwtAuthenticationFilter@6461c673, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64abb917, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5207747c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e11d73c, org.springframework.security.web.access.ExceptionTranslationFilter@7388d94d, org.springframework.security.web.access.intercept.AuthorizationFilter@3aa4d595]
+2024-04-19T19:40:13.520-05:00  INFO 29960 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T19:40:13.539-05:00  INFO 29960 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 10.954 seconds (process running for 12.178)
+2024-04-19T19:40:32.742-05:00  INFO 29960 --- [logistica] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T19:40:32.745-05:00  INFO 29960 --- [logistica] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T19:40:32.752-05:00  INFO 29960 --- [logistica] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-04-19T19:45:11.883-05:00  WARN 29960 --- [logistica] [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-19T19:45:11.884-05:00 ERROR 29960 --- [logistica] [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: insert or update on table "truck_logistic" violates foreign key constraint "fktatpvuw3v3ihnpjxqsbq9nfwu"
+  Detail: Key (client_id)=(0) is not present in table "client".
+2024-04-19T20:02:13.390-05:00  INFO 29084 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Starting LogisticaApplication using Java 19.0.1 with PID 29084 (C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\target\classes started by pipo0 in C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo)
+2024-04-19T20:02:13.394-05:00  INFO 29084 --- [logistica] [main] c.i.logistica.LogisticaApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-19T20:02:13.502-05:00  INFO 29084 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\pipo0\OneDrive\Escritorio\ingeneo\ingeneo\compose.yaml'
+2024-04-19T20:02:16.834-05:00  INFO 29084 --- [logistica] [main] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-04-19T20:02:17.971-05:00  INFO 29084 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-19T20:02:18.057-05:00  INFO 29084 --- [logistica] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
+2024-04-19T20:02:18.689-05:00  INFO 29084 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-19T20:02:18.702-05:00  INFO 29084 --- [logistica] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-19T20:02:18.703-05:00  INFO 29084 --- [logistica] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-19T20:02:18.781-05:00  INFO 29084 --- [logistica] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-19T20:02:18.782-05:00  INFO 29084 --- [logistica] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1730 ms
+2024-04-19T20:02:18.959-05:00  INFO 29084 --- [logistica] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-19T20:02:19.030-05:00  INFO 29084 --- [logistica] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-19T20:02:19.071-05:00  INFO 29084 --- [logistica] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-19T20:02:19.351-05:00  INFO 29084 --- [logistica] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-19T20:02:19.386-05:00  INFO 29084 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-19T20:02:19.553-05:00  INFO 29084 --- [logistica] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50f05307
+2024-04-19T20:02:19.555-05:00  INFO 29084 --- [logistica] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-19T20:02:19.591-05:00  WARN 29084 --- [logistica] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-19T20:02:20.933-05:00  INFO 29084 --- [logistica] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-19T20:02:21.040-05:00  INFO 29084 --- [logistica] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19T20:02:21.747-05:00  WARN 29084 --- [logistica] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19T20:02:22.895-05:00  INFO 29084 --- [logistica] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1676e501, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ed763aa, org.springframework.security.web.context.SecurityContextHolderFilter@a422390, org.springframework.security.web.header.HeaderWriterFilter@40032b7b, org.springframework.web.filter.CorsFilter@7f39bcb5, org.springframework.security.web.authentication.logout.LogoutFilter@5f0c45ae, com.ingeneo.logistica.security.JwtAuthorizationFilter@4e6881e, com.ingeneo.logistica.security.JwtAuthenticationFilter@25192b6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d056418, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@769d0ef2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76d654, org.springframework.security.web.access.ExceptionTranslationFilter@70a984c5, org.springframework.security.web.access.intercept.AuthorizationFilter@13c36d48]
+2024-04-19T20:02:23.482-05:00  INFO 29084 --- [logistica] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-19T20:02:23.501-05:00  INFO 29084 --- [logistica] [main] c.i.logistica.LogisticaApplication       : Started LogisticaApplication in 10.862 seconds (process running for 12.12)
+2024-04-19T20:02:34.851-05:00  INFO 29084 --- [logistica] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-19T20:02:34.852-05:00  INFO 29084 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-19T20:02:34.853-05:00  INFO 29084 --- [logistica] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
