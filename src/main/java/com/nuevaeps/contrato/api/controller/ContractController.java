@@ -8,6 +8,7 @@ import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -52,9 +53,12 @@ public class ContractController {
                                 content = @Content(mediaType = "application/json", 
                                 array = @ArraySchema(schema = @Schema(implementation = ContractDTO.class))))
                })
-    public ResponseEntity<Page<ContractDTO>> getAllContracts(PageRequest pageable) {
-        Page<ContractDTO> page = service.findAll(pageable);
-        return ResponseEntity.ok(page);
+    public ResponseEntity<Page<ContractDTO>> getAllContracts(
+            @RequestParam(defaultValue = "0") int page, 
+            @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<ContractDTO> pageResult = service.findAll(pageable);
+        return ResponseEntity.ok(pageResult);
     }
 
     // Crear un nuevo contrato con carga de archivo .txt
@@ -81,9 +85,20 @@ public class ContractController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El archivo debe ser un archivo .txt");
         }
 
+        // Crear el directorio si no existe
+        String uploadsDir = "uploads/";
+        Path uploadsPath = Paths.get(uploadsDir);
+        if (!Files.exists(uploadsPath)) {
+            try {
+                Files.createDirectories(uploadsPath);
+            } catch (IOException e) {
+                throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error al crear el directorio de carga");
+            }
+        }
+
         // Generar un nombre único para guardar el archivo
         String uniqueFilename = UUID.randomUUID().toString() + ".txt";
-        Path filePath = Paths.get("uploads/" + uniqueFilename);
+        Path filePath = uploadsPath.resolve(uniqueFilename);
 
         try {
             // Guardar el archivo en el servidor
@@ -97,7 +112,7 @@ public class ContractController {
         contractDTO.setModalidad(modalidad);
         contractDTO.setNumero(numero);
         contractDTO.setRegimen(regimen);
-        contractDTO.setArchivo(filePath.toString());
+        contractDTO.setArchivo(uniqueFilename);
 
         // Guardar el contrato
         ContractDTO savedContract = service.save(contractDTO);

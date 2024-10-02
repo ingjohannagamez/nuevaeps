@@ -15,20 +15,20 @@ public class OpenApiConfigSwagger {
 	@Bean
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI().info(new Info()
-				.title("INGENEO - Logistica")
-				.description("Documentación de la API 'logistica' por parte de Departamento de Desarrollo de INGENEO")
+				.title("Nueva EPS - Contratos")
+				.description("Documentación de la API 'Contratos' por parte de Departamento de Desarrollo de Nueva EPS")
 				.version("1.0")
 				.contact(new Contact()
 						.name("Johann Andres Agamez Ferres")
 						.email("ingjohannagamez@gmail.com")
-						.url("https://ingeneo.com.co/"))
+						.url("https://www.nuevaeps.com.co/"))
 				.license(new License().name("Apache 2.0")
 						.url("http://www.apache.org/licenses/LICENSE-2.0.html")))
 				.addServersItem(new Server()
 						.url("http://localhost:8080")
 						.description("Entorno de desarrollo"))
 				.addServersItem(new Server()
-						.url("https://api.ingeneo.com.co")
+						.url("https://www.nuevaeps.com.co/")
 						.description("Entorno de producción"));
 	}
 }
