@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Contratos - Nueva EPS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // Función que verifica si todos los campos están llenos
+        function checkFields() {
+            const modalidad = $('#modalidad').val();
+            const numero = $('#numero').val();
+            const regimen = $('#regimen').val();
+            const archivo = $('#archivo').val();
+            const saveButton = $('#submitBtn');
+
+            // Verifica si todos los campos tienen valores, habilita o deshabilita el botón
+            if (modalidad && numero && regimen && archivo) {
+                saveButton.prop('disabled', false);
+            } else {
+                saveButton.prop('disabled', true);
+            }
+        }
+
+        // Se ejecuta cuando el DOM está completamente cargado
+        $(document).ready(function () {
+            // Agrega un evento 'input' o 'change' a los campos del formulario
+            $('#modalidad, #numero, #regimen, #archivo').on('input change', checkFields);
+
+            // Llamar a checkFields al cargar la página para deshabilitar el botón si es necesario
+            checkFields();
+        });
+    </script>
 </head>
+
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Gestión de Contratos - Nueva EPS</h1>
@@ -26,7 +54,8 @@
             </div>
             <div class="form-group">
                 <label for="numero">Número de contrato:</label>
-                <input type="number" class="form-control" id="numero" name="numero" placeholder="Escribe el número de contrato" required>
+                <input type="number" class="form-control" id="numero" name="numero"
+                    placeholder="Escribe el número de contrato" required>
             </div>
             <div class="form-group">
                 <label for="regimen">Régimen:</label>
@@ -42,7 +71,8 @@
                 <label for="archivo">Archivo (.txt):</label>
                 <input type="file" class="form-control" id="archivo" name="archivo" accept=".txt" required>
             </div>
-            <button type="submit" class="btn btn-primary">Subir Contrato</button>
+            <!-- El botón comienza deshabilitado -->
+            <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Subir Contrato</button>
         </form>
 
         <hr>
@@ -121,7 +151,15 @@
                 contentType: false,
                 success: function () {
                     alert('Contrato subido exitosamente');
-                    loadContracts(currentPage, pageSize);  // Recargar la lista de contratos
+
+                    // Limpiar el formulario
+                    $('#uploadForm')[0].reset();
+
+                    // Deshabilitar el botón después de limpiar el formulario
+                    $('#submitBtn').prop('disabled', true);
+
+                    // Recargar la lista de contratos
+                    loadContracts(currentPage, pageSize);
                 },
                 error: function () {
                     alert('Error al subir el contrato. Asegúrate de que el archivo sea .txt');
@@ -164,4 +202,5 @@
         }
     </script>
 </body>
+
 </html>
