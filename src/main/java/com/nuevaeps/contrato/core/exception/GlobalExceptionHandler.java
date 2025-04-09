@@ -1,4 +1,4 @@
-package com.nuevaeps.contrato.api.exception;
+package com.nuevaeps.contrato.core.exception;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;

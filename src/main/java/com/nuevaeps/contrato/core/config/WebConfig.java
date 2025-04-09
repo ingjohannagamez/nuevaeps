@@ -1,4 +1,4 @@
-package com.nuevaeps.contrato.api.config;
+package com.nuevaeps.contrato.core.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.lang.NonNull;
