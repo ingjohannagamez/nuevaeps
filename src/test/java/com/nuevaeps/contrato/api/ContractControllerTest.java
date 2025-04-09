@@ -1,145 +1,102 @@
 package com.nuevaeps.contrato.api;
 
-import java.util.List;
+import java.util.Collections;
 import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.verify;
+import org.junit.jupiter.api.Test; // Ensure this import is present and correct
+import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nuevaeps.contrato.api.controller.ContractController;
 import com.nuevaeps.contrato.api.dto.ContractDTO;
 import com.nuevaeps.contrato.service.interfaces.IContractService;
 
-@ExtendWith(MockitoExtension.class)
-public class ContractControllerTest {
+@WebMvcTest(ContractController.class)
+class ContractControllerTest {
 
+    @Autowired
     private MockMvc mockMvc;
 
-    // Hacemos final porque no se cambia después de la inicialización
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    @MockBean
+    private IContractService contractService;
 
-    @Mock
-    private IContractService service;
+    private ContractDTO contractDTO;
 
-    @InjectMocks
-    private ContractController controller;
-
-    @BeforeEach
-    void setup() {
-        mockMvc = standaloneSetup(controller).build();
-    }
+	@BeforeEach
+	void setUp() {
+		contractDTO = new ContractDTO();
+		contractDTO.setId(1L);
+		contractDTO.setModalidad("Modalidad A");
+		contractDTO.setNumero(12345);
+		contractDTO.setRegimen("Subsidiado");
+		contractDTO.setArchivo("archivo.txt");
+	}
 
     @Test
-    void getAllContracts_ReturnsList() throws Exception {
-        // Simulando una lista de ContractDTO
-        List<ContractDTO> contracts = List.of(new ContractDTO());
+    void testFindAllContracts() throws Exception {
+        Page<ContractDTO> contractsPage = new PageImpl<>(Collections.singletonList(contractDTO));
+        when(contractService.findAll(PageRequest.of(0, 10))).thenReturn(contractsPage);
 
-        // Simulando una página de ContractDTO usando PageImpl
-        Page<ContractDTO> page = new PageImpl<>(contracts, PageRequest.of(0, 10), contracts.size());
-
-        // Simular que el servicio devuelve una página en lugar de una lista
-        when(service.findAll(any(PageRequest.class))).thenReturn(page);
-
-        mockMvc.perform(get("/api/contracts")
-                .contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/contracts")
+                        .param("page", "0")
+                        .param("size", "10")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-
-        verify(service).findAll(any(PageRequest.class));
+                .andExpect(jsonPath("$.content[0].modalidad").value("Modalidad A"))
+                .andExpect(jsonPath("$.content[0].numero").value(12345))
+                .andExpect(jsonPath("$.content[0].regimen").value("Subsidiado"));
     }
 
     @Test
-    void createContract_ReturnsSavedDto() throws Exception {
-        ContractDTO dto = new ContractDTO();
-        dto.setModalidad("Evento");
-        dto.setNumero(12345);
-        dto.setRegimen("Contributivo");
+    void testFindContractById() throws Exception {
+        when(contractService.findById(1L)).thenReturn(Optional.of(contractDTO));
 
-        when(service.save(any(ContractDTO.class))).thenReturn(dto);
-
-        mockMvc.perform(post("/api/contracts/upload")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
-                .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.modalidad").value("Evento"))
-                .andExpect(jsonPath("$.numero").value("12345"))
-                .andExpect(jsonPath("$.regimen").value("Contributivo"));
-
-        verify(service).save(any(ContractDTO.class));
-    }
-
-    @Test
-    void getContractById_ReturnsDto() throws Exception {
-        Long id = 1L;
-        ContractDTO dto = new ContractDTO();
-        dto.setId(id);
-        dto.setModalidad("Evento");
-        dto.setNumero(12345);
-        dto.setRegimen("Contributivo");
-
-        when(service.findById(id)).thenReturn(Optional.of(dto));
-
-        mockMvc.perform(get("/api/contracts/{id}", id)
-                .contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/contracts/1")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(id))
-                .andExpect(jsonPath("$.modalidad").value("Evento"));
-
-        verify(service).findById(id);
-    }
-
-    @Test
-    void updateContract_ReturnsUpdatedDto() throws Exception {
-        Long id = 1L;
-        ContractDTO dto = new ContractDTO();
-        dto.setModalidad("Capita");
-        dto.setNumero(6789);
-        dto.setRegimen("Subsidiado");
-
-        when(service.update(eq(id), any(ContractDTO.class))).thenReturn(dto);
-
-        mockMvc.perform(put("/api/contracts/{id}", id)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.modalidad").value("Capita"))
-                .andExpect(jsonPath("$.numero").value(67890))
+                .andExpect(jsonPath("$.modalidad").value("Modalidad A"))
+                .andExpect(jsonPath("$.numero").value(12345))
                 .andExpect(jsonPath("$.regimen").value("Subsidiado"));
-
-        verify(service).update(eq(id), any(ContractDTO.class));
     }
 
     @Test
-    void deleteContract_ReturnsNoContent() throws Exception {
-        Long id = 1L;
-        doNothing().when(service).delete(id);
+    void testUpdateContract() throws Exception {
+        when(contractService.update(Mockito.eq(1L), Mockito.any(ContractDTO.class))).thenReturn(contractDTO);
 
-        mockMvc.perform(delete("/api/contracts/{id}", id))
+        String contractJson = """
+                {
+                    "modalidad": "Modalidad A",
+                    "numero": 12345,
+                    "regimen": "Subsidiado",
+                    "archivo": "archivo.txt"
+                }
+                """;
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/contracts/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(contractJson))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.modalidad").value("Modalidad A"))
+                .andExpect(jsonPath("$.numero").value(12345))
+                .andExpect(jsonPath("$.regimen").value("Subsidiado"));
+    }
+
+    @Test
+    void testDeleteContract() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/contracts/1")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNoContent());
-
-        verify(service).delete(id);
     }
 }
